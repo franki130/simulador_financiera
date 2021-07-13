@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--CSS -->
+    <link rel="stylesheet" href="trabalho_pratico.css" />
+    <title>Trabalho Pratico</title>
+  </head>
+  <body>
+    <div class="container">
+      <section>
+        <h2>Simulação de Financiamento:</h2>
+
+        <div class="inline-block">
+          <div><label>Valor: </label></div>
+          <div><input id="valor" type="number" value="200000" /></div>
+        </div>
+
+        <div class="inline-block">
+          <div><label>Prazo (anos): </label></div>
+          <div><input id="prazo" type="number" value="20" /></div>
+        </div>
+
+        <div class="inline-block">
+          <div><label>Juros ao Ano: </label></div>
+          <div>
+            <input id="juros_ano" type="number" step="0.010" value="0.08" />
+          </div>
+        </div>
+        <br />
+        <button onclick="simular()" type="button">Simular</button>
+      </section>
+      <section class="resultado">
+        <h2>Resultado:</h2>
+        <div div class="inline-block">
+          <div><label>Prazo (meses): </label></div>
+          <div>
+            <label id="prazo_mes"></label>
+          </div>
+        </div>
+        <div class="inline-block">
+          <div><label>Juros ao mês: </label></div>
+          <div><label id="juro_mes" type="number"></label></div>
+        </div>
+        <div class="inline-block">
+          <div><label> Juros acumulados: </label></div>
+          <div><label id="juros_acumuado_total" type="number"></label></div>
+        </div>
+      </section>
+      <div class="lista">
+        <div id="id_prestacoes">Prestações</div>
+        <div id="amortizacao_por_mes">Amortização</div>
+        <div id="juros_mes">Juros</div>
+        <div id="prestacao">Total</div>
+      </div>
+    </div>
+
+    <script src="trabalho_pratico.js"></script>
+  </body>
+</html>
